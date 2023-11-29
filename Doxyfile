@@ -1,0 +1,41 @@
+
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = "Projet arbre couvrant Paris"
+PROJECT_BRIEF          = "Ce projet vise à calculer l'arbre couvrant de moids minimal reliant tous les arbres de Paris. Pour compiler : make all. Deux action sont possibles : ./bin/fichier_binaire pour créer un fichier binaire à partir d'un fichier et ./bin/arbre_couvrant pour générer l'arbre couvrant de poids minimal. Pour chacune de ces actions, utilisez -h pour afficher les arguments en ligne de commande possibles. (note : l'option -s pour sauvegarder l'arbre couvrant sous forme de liste d'adjacence ne marche pas, son exécution provoque une erreur valgrind). De plus le programme n'est pas bien optimisé donc il est déconseillé d'effectuer l'action ./bin/arbre_couvrant pour plus de 10000 arbres. Il pourrait être largement optimisé en utilisant un tas binaire au lieu d'une liste chaînée (que je n'ai pas eu le temps d'implémenter), même si sa complexité resterait O(n²) car chaque élément du tas ou de la liste est modifié pour un sommet ajouté."
+OUTPUT_DIRECTORY       = documentation
+
+BUILTIN_STL_SUPPORT = YES
+
+INPUT                  = src/ include/
+INPUT_ENCODING         = UTF-8
+RECURSIVE              = YES
+
+EXTRACT_ALL = YES
+# Show private members of class
+EXTRACT_PRIVATE = YES
+
+# Show static members of class
+EXTRACT_STATIC = YES
+
+# Add all the header and source file extensions used
+FILE_PATTERNS = *.c *.h
+
+
+# Function source code shown inline
+INLINE_SOURCES = YES
+
+# Generate class diagrams for base class
+CLASS_DIAGRAMS = YES
+
+GENERATE_TREEVIEW = YES
+
+# Number of threads to use for DOT
+DOT_NUM_THREADS = 4
+
+# Use UML notation for class diagrams
+UML_LOOK = YES
+
+# Show all members in UML class
+UML_LIMIT_NUM_FIELDS = 0
+
+OPTIMIZE_OUTPUT_FOR_C  = YES
